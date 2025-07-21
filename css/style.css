@@ -1,0 +1,784 @@
+@font-face {
+  font-family: 'Noto Sans Bengali 400';
+  src: url("../myfonts/noto-sans-bengali-400.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Noto Sans Bengali 500';
+  src: url("../myfonts/noto-sans-bengali-500.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Noto Sans Bengali 600';
+  src: url("../myfonts/noto-sans-bengali-600.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Noto Sans Bengali 700';
+  src: url("../myfonts/noto-sans-bengali-700.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Noto Sans Bengali 800';
+  src: url("../myfonts/noto-sans-bengali-800.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'Noto Sans Bengali 900';
+  src: url("../myfonts/noto-sans-bengali-900.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 900;
+}
+/* Reset code starts */
+html {
+  font-size: 62.5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans Bengali 400', sans-serif;
+  background-color: white;
+  margin: 2rem;
+}
+
+* {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  display: inline-block;
+}
+
+img {
+  max-width: 100%;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid black;
+}
+
+@media (max-width: 24em) {
+  body {
+    margin: 1.2rem;
+  }
+}
+/* Reset code ends */
+::-moz-selection {
+  background-color: black;
+  color: white;
+}
+::selection {
+  background-color: black;
+  color: white;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+.container .row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.container .row .col {
+  width: 50%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+@media (max-width: 60em) {
+  .container .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .row .col {
+    width: 100%;
+  }
+}
+#product-details .container .row {
+  width: 60%;
+  margin: 0 auto;
+}
+#product-details .container .row .col--2 {
+  padding-left: 3.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 2.4rem;
+}
+
+.imgslider {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 4px;
+          column-gap: 4px;
+}
+.imgslider__group {
+  width: 12%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 8px;
+}
+.imgslider__item {
+  width: 6rem;
+  height: 6rem;
+  background-color: #ebebeb;
+  padding: 4px;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.imgslider__item:hover {
+  background-color: #d1d1d1;
+}
+.imgslider__item--overlay {
+  position: relative;
+  overflow: hidden;
+}
+.imgslider__item--overlay::before {
+  content: '';
+  clear: both;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: #141414;
+  -webkit-filter: blur(20px);
+          filter: blur(20px);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.imgslider__thumbnail {
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+.imgslider__main {
+  width: 88%;
+  height: 60rem;
+  background-color: #ebebeb;
+  padding: 1.6rem;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+.imgslider__large {
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+.imgslider__tag {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: white;
+  padding: 4px 1rem;
+  border-radius: 1.2rem;
+  position: absolute;
+  top: 3%;
+  left: 4%;
+  font-size: 1.2rem;
+  font-family: 'Noto Sans Bengali 500';
+  color: black;
+}
+.imgslider__icon {
+  font-size: 1.4rem;
+  color: white;
+  position: absolute;
+  top: 18%;
+  left: 18%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.imgslider__arrows {
+  position: absolute;
+  bottom: 0;
+  left: 88%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 8px;
+          column-gap: 8px;
+}
+.imgslider__arrow {
+  color: black;
+  font-size: 1.4rem;
+  width: 3.6rem;
+  height: 3.6rem;
+  background-color: white;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.imgslider__arrow:hover {
+  color: #949494;
+}
+
+.infobox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 8px;
+          column-gap: 8px;
+}
+.infobox__icon {
+  font-size: 1.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.infobox__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 4px;
+          column-gap: 4px;
+}
+.infobox__text {
+  font-size: 1.4rem;
+  font-family: 'Noto Sans Bengali 600';
+}
+.infobox__link:link, .infobox__link:visited {
+  font-size: 1.4rem;
+  text-decoration: underline;
+  color: #6b6b6b;
+}
+
+.textbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  row-gap: 2rem;
+}
+.textbox__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  row-gap: 8px;
+}
+.textbox__title {
+  color: black;
+  font-size: 2.4rem;
+  line-height: 1.4;
+  font-family: 'Noto Sans Bengali 800';
+}
+.textbox__lead {
+  color: #6b6b6b;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+  font-family: 'Noto Sans Bengali 400';
+}
+.textbox__link:link, .textbox__link:visited {
+  color: black;
+  text-decoration: underline;
+  font-size: 1.4rem;
+  font-family: 'Noto Sans Bengali 500';
+}
+
+.pricing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 8px;
+          column-gap: 8px;
+}
+.pricing__title {
+  font-family: 'Noto Sans Bengali 600';
+  font-size: 1.6rem;
+}
+.pricing__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 4px;
+          column-gap: 4px;
+}
+.pricing__regular {
+  color: #6b6b6b;
+}
+.pricing__regular, .pricing__slash, .pricing__offered {
+  font-family: 'Noto Sans Bengali 700';
+  font-size: 2rem;
+}
+.pricing__info {
+  font-family: 'Noto Sans Bengali 600';
+  font-size: 1.4rem;
+  color: #37b24d;
+}
+
+.tag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 8px;
+}
+.tag__title {
+  font-family: 'Noto Sans Bengali 600';
+  font-size: 1.6rem;
+}
+.tag__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 1.6rem;
+}
+.tag__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-column-gap: 4px;
+          column-gap: 4px;
+}
+.tag__radio {
+  display: none;
+}
+.tag__radio:checked + .tag__label {
+  border: 2px solid black;
+  background-color: whitesmoke;
+}
+.tag__label {
+  font-size: 1.5rem;
+  font-family: 'Noto Sans Bengali 400';
+  color: black;
+  border: 2px solid #ebebeb;
+  padding: 4px 8px;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.tag__label:hover {
+  border: 2px solid black;
+  background-color: whitesmoke;
+}
+
+.quantity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 8px;
+}
+.quantity__title {
+  font-family: 'Noto Sans Bengali 600';
+  font-size: 1.6rem;
+}
+.quantity__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+  border: 2px solid #ebebeb;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 4px 6px;
+  border-radius: 3.2rem;
+}
+.quantity__link:link, .quantity__link:visited {
+  color: black;
+}
+.quantity__number {
+  font-size: 1.6rem;
+  font-family: 'Noto Sans Bengali 600';
+}
+.quantity__minus, .quantity__plus {
+  font-size: 1.4rem;
+  width: 2rem;
+  height: 2rem;
+  background-color: #ebebeb;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 8px;
+          column-gap: 8px;
+}
+.btn__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 8px;
+          column-gap: 8px;
+  cursor: pointer;
+}
+.btn__item--booking {
+  background-color: black;
+  color: white;
+  padding: 1.2rem 2.4rem;
+  border-radius: 5rem;
+  border: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.btn__item--booking:hover {
+  background-color: #6b6b6b;
+}
+.btn__item--favorite {
+  width: 4.6rem;
+  height: 4.6rem;
+  background-color: white;
+  padding: 1.6rem;
+  border: 2px solid #ebebeb;
+  border-radius: 50%;
+}
+.btn__item--favorite:hover {
+  border: 2px solid black;
+}
+.btn__text {
+  font-family: 'Noto Sans Bengali 600';
+  font-size: 1.6rem;
+}
+.btn__icon--favorite {
+  font-size: 1.8rem;
+}
+
+.accordion__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  row-gap: 1.2rem;
+}
+.accordion__item {
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+}
+.accordion__radio, .accordion__content {
+  display: none;
+}
+.accordion__radio:checked ~ .accordion__content {
+  display: block;
+}
+.accordion__radio:checked ~ .accordion__label {
+  background-color: whitesmoke;
+}
+.accordion__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.6rem 0;
+  cursor: pointer;
+}
+.accordion__text {
+  font-family: 'Noto Sans Bengali 600';
+  font-size: 1.7rem;
+}
+.accordion__icon {
+  font-size: 1.2rem;
+}
+
+.iconbox {
+  border: 2px solid #d1d1d1;
+  margin: 1.2rem 0;
+  padding: 1.6rem;
+}
+.iconbox__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  row-gap: 1.6rem;
+}
+.iconbox__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  row-gap: 4px;
+}
+.iconbox__title {
+  font-size: 1.6rem;
+}
+.iconbox__info {
+  font-size: 1.4rem;
+}
+.iconbox__link:link, .iconbox__link:visited {
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 8px;
+          column-gap: 8px;
+}
+.iconbox__icon {
+  font-size: 1.4rem;
+}
+.iconbox__text {
+  font-size: 1.4rem;
+  font-family: 'Noto Sans Bengali 600';
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=style.css.map */
