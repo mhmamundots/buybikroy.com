@@ -1,38 +1,20 @@
 @font-face {
-  font-family: 'Noto Sans Bengali 400';
-  src: url("../myfonts/noto-sans-bengali-400.ttf") format("truetype");
+  font-family: 'SF Pro Display 400';
+  src: url("../myfonts/sf-pro-display-400.ttf") format("truetype");
   font-style: normal;
   font-weight: 400;
 }
 @font-face {
-  font-family: 'Noto Sans Bengali 500';
-  src: url("../myfonts/noto-sans-bengali-500.ttf") format("truetype");
+  font-family: 'SF Pro Display 500';
+  src: url("../myfonts/sf-pro-display-500.ttf") format("truetype");
   font-style: normal;
   font-weight: 500;
 }
 @font-face {
-  font-family: 'Noto Sans Bengali 600';
-  src: url("../myfonts/noto-sans-bengali-600.ttf") format("truetype");
+  font-family: 'SF Pro Display 600';
+  src: url("../myfonts/sf-pro-display-600.ttf") format("truetype");
   font-style: normal;
   font-weight: 600;
-}
-@font-face {
-  font-family: 'Noto Sans Bengali 700';
-  src: url("../myfonts/noto-sans-bengali-700.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 700;
-}
-@font-face {
-  font-family: 'Noto Sans Bengali 800';
-  src: url("../myfonts/noto-sans-bengali-800.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 800;
-}
-@font-face {
-  font-family: 'Noto Sans Bengali 900';
-  src: url("../myfonts/noto-sans-bengali-900.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 900;
 }
 /* Reset code starts */
 html {
@@ -147,9 +129,17 @@ hr {
 #product-details .container .row {
   width: 60%;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-column-gap: 2.4rem;
+          column-gap: 2.4rem;
 }
 #product-details .container .row .col--2 {
-  padding-left: 3.2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -157,7 +147,10 @@ hr {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  row-gap: 2.4rem;
+  row-gap: 3.2rem;
+  padding: 2.4rem;
+  border: 1px solid #ebebeb;
+  border-radius: 4px;
 }
 
 .imgslider {
@@ -165,11 +158,13 @@ hr {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 4px;
-          column-gap: 4px;
+  -webkit-column-gap: 1.2rem;
+          column-gap: 1.2rem;
 }
 .imgslider__group {
-  width: 12%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -177,11 +172,11 @@ hr {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  row-gap: 8px;
+  row-gap: 1.2rem;
 }
 .imgslider__item {
-  width: 6rem;
-  height: 6rem;
+  width: 8rem;
+  height: 8rem;
   background-color: #ebebeb;
   padding: 4px;
   border-radius: 4px;
@@ -225,11 +220,13 @@ hr {
   height: max-content;
 }
 .imgslider__main {
-  width: 88%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   height: 60rem;
-  background-color: #ebebeb;
   padding: 1.6rem;
   border-radius: 4px;
+  border: 1px solid #ebebeb;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -251,22 +248,22 @@ hr {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  background-color: white;
-  padding: 4px 1rem;
-  border-radius: 1.2rem;
+  padding: 8px 1.6rem;
+  border-radius: 2rem;
+  border: 1px solid #37b24d;
   position: absolute;
   top: 3%;
   left: 4%;
-  font-size: 1.2rem;
-  font-family: 'Noto Sans Bengali 500';
-  color: black;
+  font-size: 1.4rem;
+  font-family: "SF Pro Display 500";
+  color: #37b24d;
 }
 .imgslider__icon {
-  font-size: 1.4rem;
+  font-size: 2rem;
   color: white;
   position: absolute;
-  top: 18%;
-  left: 18%;
+  top: 50%;
+  left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
@@ -293,12 +290,12 @@ hr {
           column-gap: 8px;
 }
 .imgslider__arrow {
-  color: black;
+  color: #d1d1d1;
   font-size: 1.4rem;
-  width: 3.6rem;
-  height: 3.6rem;
-  background-color: white;
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
+  border: 2px solid #d1d1d1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -312,7 +309,8 @@ hr {
   transition: all 0.2s ease-in-out;
 }
 .imgslider__arrow:hover {
-  color: #949494;
+  border: 2px solid black;
+  color: black;
 }
 
 .infobox {
@@ -363,9 +361,10 @@ hr {
 }
 .infobox__text {
   font-size: 1.4rem;
-  font-family: 'Noto Sans Bengali 600';
+  font-family: "SF Pro Display 500";
 }
 .infobox__link:link, .infobox__link:visited {
+  font-family: "SF Pro Display 500";
   font-size: 1.4rem;
   text-decoration: underline;
   color: #6b6b6b;
@@ -401,25 +400,25 @@ hr {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  row-gap: 8px;
+  row-gap: 1.2rem;
 }
 .textbox__title {
   color: black;
   font-size: 2.4rem;
-  line-height: 1.4;
-  font-family: 'Noto Sans Bengali 800';
+  line-height: 1.2;
+  font-family: "SF Pro Display 600";
 }
 .textbox__lead {
   color: #6b6b6b;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   line-height: 2.4rem;
-  font-family: 'Noto Sans Bengali 400';
+  font-family: "SF Pro Display 400";
 }
 .textbox__link:link, .textbox__link:visited {
   color: black;
   text-decoration: underline;
   font-size: 1.4rem;
-  font-family: 'Noto Sans Bengali 500';
+  font-family: "SF Pro Display 600";
 }
 
 .pricing {
@@ -433,14 +432,14 @@ hr {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   -webkit-column-gap: 8px;
           column-gap: 8px;
 }
 .pricing__title {
-  font-family: 'Noto Sans Bengali 600';
+  font-family: "SF Pro Display 600";
   font-size: 1.6rem;
 }
 .pricing__wrapper {
@@ -462,15 +461,20 @@ hr {
 }
 .pricing__regular {
   color: #6b6b6b;
+  font-family: "SF Pro Display 400";
+}
+.pricing__offered {
+  color: #6b6b6b;
+  font-family: "SF Pro Display 600";
 }
 .pricing__regular, .pricing__slash, .pricing__offered {
-  font-family: 'Noto Sans Bengali 700';
   font-size: 2rem;
+  color: black;
 }
 .pricing__info {
-  font-family: 'Noto Sans Bengali 600';
-  font-size: 1.4rem;
-  color: #37b24d;
+  font-family: "SF Pro Display 500";
+  font-size: 2rem;
+  color: #f03e3e;
 }
 
 .tag {
@@ -481,10 +485,10 @@ hr {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  row-gap: 8px;
+  row-gap: 1.2rem;
 }
 .tag__title {
-  font-family: 'Noto Sans Bengali 600';
+  font-family: "SF Pro Display 400";
   font-size: 1.6rem;
 }
 .tag__wrapper {
@@ -495,7 +499,7 @@ hr {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  row-gap: 1.6rem;
+  row-gap: 6px;
 }
 .tag__list {
   display: -webkit-box;
@@ -505,23 +509,25 @@ hr {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-column-gap: 4px;
-          column-gap: 4px;
+  -webkit-column-gap: 6px;
+          column-gap: 6px;
 }
 .tag__radio {
   display: none;
 }
 .tag__radio:checked + .tag__label {
-  border: 2px solid black;
   background-color: whitesmoke;
+  border: 2px solid black;
 }
 .tag__label {
+  padding: 6px 1.2rem;
+  display: inline-block;
   font-size: 1.5rem;
-  font-family: 'Noto Sans Bengali 400';
+  font-family: "SF Pro Display 400";
   color: black;
   border: 2px solid #ebebeb;
-  padding: 4px 8px;
   border-radius: 4px;
+  cursor: pointer;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -541,7 +547,7 @@ hr {
   row-gap: 8px;
 }
 .quantity__title {
-  font-family: 'Noto Sans Bengali 600';
+  font-family: "SF Pro Display 500";
   font-size: 1.6rem;
 }
 .quantity__wrapper {
@@ -568,7 +574,7 @@ hr {
 }
 .quantity__number {
   font-size: 1.6rem;
-  font-family: 'Noto Sans Bengali 600';
+  font-family: "SF Pro Display 400";
 }
 .quantity__minus, .quantity__plus {
   font-size: 1.4rem;
@@ -625,36 +631,38 @@ hr {
   -webkit-column-gap: 8px;
           column-gap: 8px;
   cursor: pointer;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
-.btn__item--booking {
+.btn__item--texttype {
   background-color: black;
   color: white;
   padding: 1.2rem 2.4rem;
-  border-radius: 5rem;
-  border: none;
+  border-radius: 4px;
+  border: 2px solid black;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-.btn__item--booking:hover {
-  background-color: #6b6b6b;
-}
-.btn__item--favorite {
-  width: 4.6rem;
-  height: 4.6rem;
+.btn__item--texttype:hover {
   background-color: white;
-  padding: 1.6rem;
-  border: 2px solid #ebebeb;
-  border-radius: 50%;
+  border: 2px solid black;
+  color: black;
 }
-.btn__item--favorite:hover {
+.btn__item--icontype {
+  background-color: white;
+  padding: 1.2rem;
+  border: 2px solid #ebebeb;
+  border-radius: 4px;
+}
+.btn__item--icontype:hover {
   border: 2px solid black;
 }
 .btn__text {
-  font-family: 'Noto Sans Bengali 600';
+  font-family: "SF Pro Display 500";
   font-size: 1.6rem;
 }
-.btn__icon--favorite {
-  font-size: 1.8rem;
+.btn__icon {
+  font-size: 2rem;
 }
 
 .accordion__wrapper {
@@ -704,17 +712,22 @@ hr {
   cursor: pointer;
 }
 .accordion__text {
-  font-family: 'Noto Sans Bengali 600';
-  font-size: 1.7rem;
+  font-family: "SF Pro Display 600";
+  font-size: 1.8rem;
 }
 .accordion__icon {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
+}
+.accordion__box {
+  padding: 2rem 0;
 }
 
-.iconbox {
-  border: 2px solid #d1d1d1;
-  margin: 1.2rem 0;
-  padding: 1.6rem;
+.iconbox:not(:first-child) {
+  padding-top: 2rem;
+}
+.iconbox:not(:last-child) {
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 2rem;
 }
 .iconbox__wrapper {
   display: -webkit-box;
@@ -730,7 +743,7 @@ hr {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  row-gap: 1.6rem;
+  row-gap: 2rem;
 }
 .iconbox__content {
   display: -webkit-box;
@@ -750,12 +763,16 @@ hr {
 }
 .iconbox__title {
   font-size: 1.6rem;
+  font-family: "SF Pro Display 400";
 }
 .iconbox__info {
   font-size: 1.4rem;
+  font-family: "SF Pro Display 400";
+  color: #6b6b6b;
 }
 .iconbox__link:link, .iconbox__link:visited {
-  color: black;
+  color: #1c7ed6;
+  font-family: "SF Pro Display 400";
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -777,8 +794,206 @@ hr {
 }
 .iconbox__text {
   font-size: 1.4rem;
-  font-family: 'Noto Sans Bengali 600';
+  font-family: "SF Pro Display 400";
   text-decoration: underline;
+}
+
+.ratings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 4px;
+          column-gap: 4px;
+}
+.ratings__wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 4px;
+          column-gap: 4px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.ratings__stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 2px;
+          column-gap: 2px;
+}
+.ratings__icon {
+  color: #f03e3e;
+  font-size: 1.2rem;
+}
+.ratings__info {
+  width: 100%;
+  font-size: 1.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.ratings__avg--1 {
+  font-family: "SF Pro Display 500";
+  color: #6b6b6b;
+}
+.ratings__avg--2 {
+  font-family: "SF Pro Display 600";
+}
+.ratings__btn {
+  border: none;
+  background-color: transparent;
+  font-family: "SF Pro Display 600";
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.reviews {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.reviews__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 1.2rem;
+  padding-top: 2rem;
+}
+.reviews__item:not(:last-child) {
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 2rem;
+}
+.reviews__author {
+  font-size: 1.5rem;
+  font-family: "SF Pro Display 600";
+}
+.reviews__quote {
+  font-size: 1.5rem;
+  font-family: "SF Pro Display 400";
+  line-height: 1.6;
+  font-style: italic;
+}
+.reviews__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 4px;
+          column-gap: 4px;
+}
+.reviews__stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-column-gap: 2px;
+          column-gap: 2px;
+}
+.reviews__icon {
+  font-size: 1.2rem;
+  color: #f03e3e;
+}
+.reviews__info {
+  font-size: 1.2rem;
+  font-family: "SF Pro Display 400";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-column-gap: 4px;
+          column-gap: 4px;
+}
+.reviews__number {
+  font-size: 1.4rem;
+}
+
+.infolist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 2rem;
+}
+.infolist__lead {
+  font-size: 1.5rem;
+  font-family: "SF Pro Display 400";
+  line-height: 1.6;
+}
+.infolist__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 1.6rem;
+}
+.infolist__about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 4px;
+}
+.infolist__title {
+  font-size: 1.6rem;
+  font-family: "SF Pro Display 500";
+  line-height: 1.6;
+}
+.infolist__item {
+  padding: 4px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 8px;
+          column-gap: 8px;
+}
+.infolist__icon {
+  font-size: 1.4rem;
+}
+.infolist__icon--pros {
+  color: #37b24d;
+}
+.infolist__icon--cons {
+  color: #f03e3e;
+}
+.infolist__text {
+  font-size: 1.6rem;
+  font-family: "SF Pro Display 400";
 }
 
 /*# sourceMappingURL=style.css.map */
