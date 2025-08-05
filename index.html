@@ -21,538 +21,113 @@
   </head>
   <body>
     <!-- header starts -->
-    <header id="header"></header>
+    <header id="header">
+      <div class="container">
+        <div class="row row--1">
+          <div class="col">
+            <div class="brand">
+              <a href="" class="brand__logo">
+                <img
+                  src="./assets/homepage/buy-bikroy.png"
+                  alt="Buy Bikroy is an multivendor e-commerce platform."
+                  class="brand__img"
+                />
+              </a>
+            </div>
+
+            <div class="search">
+              <button type="button" class="search__btn search__btn--voice">
+                <i
+                  class="search__icon search__icon--microphone fa-solid fa-microphone"
+                ></i>
+              </button>
+              <div class="search__wrapper">
+                <div class="search__box">
+                  <i
+                    class="search__icon search__icon--magnifying fa-solid fa-magnifying-glass"
+                  ></i>
+                  <input
+                    type="search"
+                    name=""
+                    id=""
+                    class="search__input"
+                    placeholder="Search by category or brands..."
+                  />
+                </div>
+
+                <div class="search__menu">
+                  <button type="button" class="search__btn search__btn--select">
+                    <span class="search__text">Category</span>
+                    <i
+                      class="search__icon search__icon--dropdown fa-solid fa-chevron-down"
+                    ></i>
+                  </button>
+
+                  <div class="search__list">
+                    <button type="button" class="search__btn search__btn--item">
+                      <i
+                        class="search__icon search__icon--item fa-solid fa-list"
+                      ></i>
+                      <div class="search__content">
+                        <h4 class="search__title">Category</h4>
+                        <h5 class="search__subtitle">
+                          Search by product category
+                        </h5>
+                      </div>
+                    </button>
+                    <button type="button" class="search__btn search__btn--item">
+                      <i
+                        class="search__icon search__icon--item fa-brands fa-product-hunt"
+                      ></i>
+                      <div class="search__content">
+                        <h4 class="search__title">Name</h4>
+                        <h5 class="search__subtitle">Search by product name</h5>
+                      </div>
+                    </button>
+                    <button type="button" class="search__btn search__btn--item">
+                      <i
+                        class="search__icon search__icon--item fa-regular fa-image"
+                      ></i>
+                      <div class="search__content">
+                        <h4 class="search__title">Brand</h4>
+                        <h5 class="search__subtitle">Search by brand name</h5>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="user">
+              <button type="button" class="user__btn">
+                <i class="user__icon fa-solid fa-bag-shopping"></i>
+                <span class="user__text">Cart</span>
+              </button>
+              <button type="button" class="user__btn">
+                <i class="user__icon fa-solid fa-user"></i>
+                <span class="user__text">Register/Login</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="row row--2">
+          <div class="col col--1"></div>
+          <div class="col col--2"></div>
+        </div>
+      </div>
+    </header>
     <!-- header ends here -->
 
     <!-- body content starts -->
     <main id="body">
-      <section id="product-details">
-        <div class="container">
-          <div class="row">
-            <div class="col col--1">
-              <div class="imgslider">
-                <div class="imgslider__group">
-                  <div class="imgslider__item">
-                    <img
-                      src="./assets/single-product/img-1.png"
-                      alt=""
-                      class="imgslider__thumbnail"
-                    />
-                  </div>
-                  <div class="imgslider__item">
-                    <img
-                      src="./assets/single-product/img-2.png"
-                      alt=""
-                      class="imgslider__thumbnail"
-                    />
-                  </div>
-                  <div class="imgslider__item imgslider__item--overlay">
-                    <img
-                      src="./assets/single-product/img-1.png"
-                      alt=""
-                      class="imgslider__thumbnail"
-                    />
-                    <i class="imgslider__icon fa-solid fa-play"></i>
-                  </div>
-                </div>
-                <div class="imgslider__main">
-                  <a class="imgslider__link" href="#"
-                    ><span class="imgslider__tag">Highest Rated</span></a
-                  >
-                  <img
-                    src="./assets/single-product/img-1.png"
-                    alt=""
-                    class="imgslider__large"
-                  />
-                  <div class="imgslider__arrows">
-                    <a class="imgslider__link" href="#"
-                      ><i class="imgslider__arrow fa-solid fa-chevron-left"></i
-                    ></a>
-                    <a class="imgslider__link" href="#"
-                      ><i class="imgslider__arrow fa-solid fa-chevron-right"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col col--2">
-              <!-- <div class="infobox">
-                <i class="infobox__icon fa-solid fa-location-dot"></i>
-                <div class="infobox__wrapper">
-                  <span class="infobox__text"
-                    >Find the available locations</span
-                  >
-                  <a href="#" class="infobox__link">click here</a>
-                </div>
-              </div> -->
-              <div class="textbox">
-                <div class="textbox__wrapper">
-                  <h2 class="textbox__title">
-                    100% local beef at affordable prices and accurate weight
-                  </h2>
-
-                  <div class="ratings">
-                    <div class="ratings__wrapper">
-                      <div class="ratings__stars">
-                        <i class="ratings__icon fa-solid fa-star"></i>
-                        <i class="ratings__icon fa-solid fa-star"></i>
-                        <i class="ratings__icon fa-solid fa-star"></i>
-                        <i
-                          class="ratings__icon fa-solid fa-star-half-stroke"
-                        ></i>
-                        <i class="ratings__icon fa-regular fa-star"></i>
-                      </div>
-                      <div class="ratings__info">
-                        <span class="ratings__avg ratings__avg--1"
-                          >3.8 ratings on 3 reviews</span
-                        >
-                        <!-- <button type="button" class="ratings__btn">
-                          Leave a review
-                        </button> -->
-                      </div>
-                    </div>
-                  </div>
-
-                  <p class="textbox__lead">
-                    Fresh beef from cows raised naturally by village farmers.
-                    People from any class of society can buy beef from us from a
-                    minimum of 100gm to a maximum of 20kg through pre-booking.
-                    We do not see this as a business, but rather as an improved
-                    service.
-                    <!-- <a href="#" class="textbox__link">Read More</a> -->
-                  </p>
-                </div>
-              </div>
-              <div class="pricing">
-                <h3 class="pricing__title">MRP:</h3>
-                <div class="pricing__wrapper">
-                  <del class="pricing__regular">200 BDT</del>
-                  <span class="pricing__slash">/</span>
-                  <span class="pricing__offered">180 BDT</span>
-                </div>
-                <!-- <span class="pricing__info">[20% Discount]</span> -->
-              </div>
-              <div class="tag">
-                <h4 class="tag__title">Weight:</h4>
-                <div class="tag__wrapper">
-                  <div class="tag__list">
-                    <div class="tag__item">
-                      <input
-                        class="tag__radio"
-                        type="radio"
-                        id="1"
-                        name="quantity"
-                        checked
-                      />
-                      <label class="tag__label" for="1">100gm</label>
-                    </div>
-                    <div class="tag__item">
-                      <input
-                        class="tag__radio"
-                        type="radio"
-                        id="2"
-                        name="quantity"
-                      />
-                      <label class="tag__label" for="2">200gm</label>
-                    </div>
-                    <div class="tag__item">
-                      <input
-                        class="tag__radio"
-                        type="radio"
-                        id="3"
-                        name="quantity"
-                      />
-                      <label class="tag__label" for="3">500gm</label>
-                    </div>
-                    <div class="tag__item">
-                      <input
-                        class="tag__radio"
-                        type="radio"
-                        id="4"
-                        name="quantity"
-                      />
-                      <label class="tag__label" for="4">1kg</label>
-                    </div>
-                    <div class="tag__item">
-                      <input
-                        class="tag__radio"
-                        type="radio"
-                        id="5"
-                        name="quantity"
-                      />
-                      <label class="tag__label" for="5">5kg</label>
-                    </div>
-                  </div>
-                  <div class="tag__list">
-                    <div class="tag__item">
-                      <input
-                        class="tag__radio"
-                        type="radio"
-                        id="6"
-                        name="quantity"
-                      />
-                      <label class="tag__label" for="6">10kg</label>
-                    </div>
-                    <div class="tag__item">
-                      <input
-                        class="tag__radio"
-                        type="radio"
-                        id="7"
-                        name="quantity"
-                      />
-                      <label class="tag__label" for="7">15kg</label>
-                    </div>
-                    <div class="tag__item">
-                      <input
-                        class="tag__radio"
-                        type="radio"
-                        id="8"
-                        name="quantity"
-                      />
-                      <label class="tag__label" for="8">20kg</label>
-                    </div>
-                    <div class="tag__item">
-                      <input
-                        class="tag__radio"
-                        type="radio"
-                        id="9"
-                        name="quantity"
-                      />
-                      <label class="tag__label" for="9">25kg</label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="quantity">
-                <h3 class="quantity__title">Order:</h3>
-                <div class="quantity__wrapper">
-                  <a href="#" class="quantity__link"
-                    ><i class="quantity__minus fa-solid fa-minus"></i
-                  ></a>
-                  <span class="quantity__number">1</span>
-                  <a href="#" class="quantity__link"
-                    ><i class="quantity__plus fa-solid fa-plus"></i
-                  ></a>
-                </div>
-              </div>
-              <div class="btn">
-                <button class="btn__item btn__item--texttype btn__item--book">
-                  <span class="btn__text">Book Now</span>
-                  <!-- <i
-                    class="btn__icon btn__icon--icontype btn__icon--book fa-solid fa-up-right-from-square"
-                  ></i> -->
-                </button>
-
-                <button
-                  class="btn__item btn__item--icontype btn__item--favorite"
-                >
-                  <!-- <span class="btn__text">প্রি-বুকিং করুন</span> -->
-                  <i
-                    class="btn__icon btn__icon--icontype btn__icon--favorite fa-solid fa-heart"
-                  ></i>
-                </button>
-
-                <button class="btn__item btn__item--icontype btn__item--share">
-                  <!-- <span class="btn__text">প্রি-বুকিং করুন</span> -->
-                  <i
-                    class="btn__icon btn__icon--icontype btn__icon--share fa-solid fa-share"
-                  ></i>
-                </button>
-
-                <button class="btn__item btn__item--icontype btn__item--view">
-                  <!-- <span class="btn__text">প্রি-বুকিং করুন</span> -->
-                  <i
-                    class="btn__icon btn__icon--icontype btn__icon--view fa-solid fa-eye"
-                  ></i>
-                </button>
-              </div>
-
-              <div class="accordion">
-                <div class="accordion__wrapper">
-                  <div class="accordion__item">
-                    <input
-                      class="accordion__radio"
-                      type="radio"
-                      id="accordion-1"
-                      name="faq"
-                      checked
-                    />
-
-                    <label for="accordion-1" class="accordion__label">
-                      <span class="accordion__text">Location & Time</span>
-                      <i class="accordion__icon fa-solid fa-chevron-down"></i>
-                    </label>
-                    <div class="accordion__content">
-                      <div class="accordion__box">
-                        <!-- ============= -->
-                        <div class="iconbox">
-                          <div class="iconbox__wrapper">
-                            <div class="iconbox__item">
-                              <div class="iconbox__content">
-                                <h3 class="iconbox__title">
-                                  Cirkit House, Bhrammaputra River Aside
-                                </h3>
-                                <div class="iconbox__info">
-                                  Mymensingh Sadar - 2200, Mymensingh Division
-                                </div>
-                              </div>
-                            </div>
-                            <div class="iconbox__item">
-                              <!-- <i class="iconbox__icon fa-solid fa-headphones"></i> -->
-                              <div class="iconbox__content">
-                                <h3 class="iconbox__title">Date & Time</h3>
-                                <div class="iconbox__info">
-                                  1st Friday on every month, 8AM - 2PM
-                                </div>
-                              </div>
-                            </div>
-                            <a href="#" class="iconbox__link">
-                              <i
-                                class="iconbox__icon fa-solid fa-map-location-dot"
-                              ></i>
-                              <span class="iconbox__text">View Location</span>
-                            </a>
-                          </div>
-                        </div>
-                        <div class="iconbox">
-                          <div class="iconbox__wrapper">
-                            <div class="iconbox__item">
-                              <div class="iconbox__content">
-                                <h3 class="iconbox__title">
-                                  Notun Bazar, Maskanda
-                                </h3>
-                                <div class="iconbox__info">
-                                  Mymensingh Sadar - 2200, Mymensingh Division
-                                </div>
-                              </div>
-                            </div>
-                            <div class="iconbox__item">
-                              <!-- <i class="iconbox__icon fa-solid fa-headphones"></i> -->
-                              <div class="iconbox__content">
-                                <h3 class="iconbox__title">Date & Time</h3>
-                                <div class="iconbox__info">
-                                  2nd Friday on every month, 8AM - 2PM
-                                </div>
-                              </div>
-                            </div>
-                            <a href="#" class="iconbox__link">
-                              <i
-                                class="iconbox__icon fa-solid fa-map-location-dot"
-                              ></i>
-                              <span class="iconbox__text">View Location</span>
-                            </a>
-                          </div>
-                        </div>
-                        <!-- =================== -->
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion__item">
-                    <input
-                      class="accordion__radio"
-                      type="radio"
-                      id="accordion-2"
-                      name="faq"
-                    />
-
-                    <label for="accordion-2" class="accordion__label">
-                      <span class="accordion__text">Pros & Cons</span>
-                      <i class="accordion__icon fa-solid fa-chevron-down"></i>
-                    </label>
-                    <div class="accordion__content">
-                      <div class="accordion__box">
-                        <!-- ============= -->
-                        <div class="infolist">
-                          <p class="infolist__lead">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Consequatur corporis pariatur quidem doloribus
-                            eaque laboriosam optio, ea minima vitae nostrum
-                            consectetur voluptates labore eligendi.
-                          </p>
-                          <div class="infolist__wrapper">
-                            <div class="infolist__about">
-                              <h3 class="infolist__title">Pros</h3>
-                              <ul class="infolist__list">
-                                <li class="infolist__item">
-                                  <i
-                                    class="infolist__icon infolist__icon--pros fa-solid fa-check"
-                                  ></i>
-                                  <span class="infolist__text">
-                                    Lorem ipsum dolor sit amet.
-                                  </span>
-                                </li>
-                                <li class="infolist__item">
-                                  <i
-                                    class="infolist__icon infolist__icon--pros fa-solid fa-check"
-                                  ></i>
-                                  <span class="infolist__text">
-                                    Lorem ipsum dolor, sit amet consectetur.
-                                  </span>
-                                </li>
-                                <li class="infolist__item">
-                                  <i
-                                    class="infolist__icon infolist__icon--pros fa-solid fa-check"
-                                  ></i>
-                                  <span class="infolist__text">
-                                    Sit amet consectetur.
-                                  </span>
-                                </li>
-                              </ul>
-                            </div>
-                            <div class="infolist__about">
-                              <h3 class="infolist__title">Cons</h3>
-                              <ul class="infolist__list">
-                                <li class="infolist__item">
-                                  <i
-                                    class="infolist__icon infolist__icon--cons fa-solid fa-check"
-                                  ></i>
-                                  <span class="infolist__text">
-                                    Lorem ipsum dolor sit amet.
-                                  </span>
-                                </li>
-                                <li class="infolist__item">
-                                  <i
-                                    class="infolist__icon infolist__icon--cons fa-solid fa-check"
-                                  ></i>
-                                  <span class="infolist__text">
-                                    Lorem ipsum dolor, sit amet consectetur.
-                                  </span>
-                                </li>
-                                <li class="infolist__item">
-                                  <i
-                                    class="infolist__icon infolist__icon--cons fa-solid fa-check"
-                                  ></i>
-                                  <span class="infolist__text">
-                                    Sit amet consectetur.
-                                  </span>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- =================== -->
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion__item">
-                    <input
-                      class="accordion__radio"
-                      type="radio"
-                      id="accordion-3"
-                      name="faq"
-                    />
-
-                    <label for="accordion-3" class="accordion__label">
-                      <span class="accordion__text">Reviews & Ratings</span>
-                      <i class="accordion__icon fa-solid fa-chevron-down"></i>
-                    </label>
-                    <div class="accordion__content">
-                      <div class="accordion__box">
-                        <!-- ============= -->
-                        <div class="ratings">
-                          <div class="ratings__wrapper">
-                            <div class="ratings__stars">
-                              <i class="ratings__icon fa-solid fa-star"></i>
-                              <i class="ratings__icon fa-solid fa-star"></i>
-                              <i class="ratings__icon fa-solid fa-star"></i>
-                              <i
-                                class="ratings__icon fa-solid fa-star-half-stroke"
-                              ></i>
-                              <i class="ratings__icon fa-regular fa-star"></i>
-                            </div>
-                            <div class="ratings__info">
-                              <span class="ratings__avg ratings__avg--2"
-                                >3.8 ratings</span
-                              >
-                              <button type="button" class="ratings__btn">
-                                Leave a review
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="reviews">
-                          <div class="reviews__item">
-                            <div class="reviews__author">MH Mamun</div>
-                            <q class="reviews__quote">
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit. Maecenas risus felis, sagittis eu erat a,
-                              tincidunt rutrum sem. Sed sed tellus nec justo
-                              pharetra laoreet.
-                            </q>
-                            <div class="reviews__wrapper">
-                              <div class="reviews__stars">
-                                <i class="reviews__icon fa-solid fa-star"></i>
-                                <i class="reviews__icon fa-solid fa-star"></i>
-                                <i class="reviews__icon fa-solid fa-star"></i>
-                                <i class="reviews__icon fa-solid fa-star"></i>
-                                <i class="reviews__icon fa-regular fa-star"></i>
-                              </div>
-                              <div class="reviews__info">
-                                <span class="reviews__number">4.0</span>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="reviews__item">
-                            <div class="reviews__author">MH Mamun</div>
-                            <q class="reviews__quote">
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit. Maecenas risus felis, sagittis eu erat a,
-                              tincidunt rutrum sem. Sed sed tellus nec justo
-                              pharetra laoreet.
-                            </q>
-                            <div class="reviews__wrapper">
-                              <div class="reviews__stars">
-                                <i class="reviews__icon fa-solid fa-star"></i>
-                                <i class="reviews__icon fa-solid fa-star"></i>
-                                <i class="reviews__icon fa-solid fa-star"></i>
-                                <i class="reviews__icon fa-regular fa-star"></i>
-                                <i class="reviews__icon fa-regular fa-star"></i>
-                              </div>
-                              <div class="reviews__info">
-                                <span class="reviews__number">3.0</span>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="reviews__item">
-                            <div class="reviews__author">MH Mamun</div>
-                            <q class="reviews__quote">
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit. Maecenas risus felis, sagittis eu erat a,
-                              tincidunt rutrum sem. Sed sed tellus nec justo
-                              pharetra laoreet.
-                            </q>
-                            <div class="reviews__wrapper">
-                              <div class="reviews__stars">
-                                <i class="reviews__icon fa-solid fa-star"></i>
-                                <i class="reviews__icon fa-solid fa-star"></i>
-                                <i class="reviews__icon fa-solid fa-star"></i>
-                                <i class="reviews__icon fa-solid fa-star"></i>
-                                <i
-                                  class="reviews__icon fa-solid fa-star-half-stroke"
-                                ></i>
-                              </div>
-                              <div class="reviews__info">
-                                <span class="reviews__number">4.5</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- =================== -->
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <a href="./single-product.html">Go to single product page</a>
     </main>
-    <!-- body content ends here -->
+    <!-- body ends here -->
 
-    <!-- footer starts -->
+    <!-- body content starts -->
     <footer id="footer"></footer>
-    <!-- footer ends here -->
+    <!-- body ends here -->
+
+    <script type="text/javascript" src="./js/scripts.js"></script>
   </body>
 </html>
